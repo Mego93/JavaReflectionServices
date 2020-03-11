@@ -82,6 +82,3 @@ public class ServiceXml implements Service {
 		 s.close(); 
 	}
 }
- 
-   
-	
