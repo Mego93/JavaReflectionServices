@@ -17,10 +17,10 @@ import org.xml.sax.SAXParseException;
 import bri.Service;
 
 public class ServiceXml implements Service {
-	private final Socket client;
+	private final Socket s;
 	
 	public ServiceXml (Socket socket) {
-		client = socket;
+		s = socket;
 	}
 	
 	static class Erreur implements ErrorHandler{
@@ -79,7 +79,7 @@ public class ServiceXml implements Service {
    }
    
 	protected void finalize() throws Throwable {
-		 client.close(); 
+		 s.close(); 
 	}
 }
  
